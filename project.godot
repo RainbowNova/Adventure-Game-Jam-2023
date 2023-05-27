@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=640
 window/size/viewport_height=480
-window/stretch/scale=4.0
+window/stretch/scale=2.0
 
 [input]
 

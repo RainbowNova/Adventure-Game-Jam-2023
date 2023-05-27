@@ -1,6 +1,23 @@
 2a60927148abd1d33b818b535e306557
-::res://::1685182333
+::res://::1685183568
 icon.svg::CompressedTexture2D::4535915949084907462::1685182174::1685182185::1::::<><>::
-::res://Player/::1685182353
-Player.tscn::PackedScene::124908463830738844::1685182305::0::1::::<><>::
-temp_player.png::CompressedTexture2D::2224185203187482953::1685182353::1685182353::1::::<><>::
+TestingArea.tscn::PackedScene::4436758001121318699::1685183302::0::1::::<><>::uid://b1rhvd8vpahg
+::res://Entities/::1685183486
+::res://Entities/Player/::1685183493
+Player.gd::GDScript::-1::1685183301::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::1874503245096160807::1685183493::0::1::::<><>::res://Entities/Player/Player.gd<>uid://6xoagf3wq1q8
+temp_player.png::CompressedTexture2D::2224185203187482953::1685182353::1685183487::1::::<><>::
+::res://Tileset/::1685183517
+::res://Tilesets/::1685183568
+Fences.png::CompressedTexture2D::4595596510298074871::1685183568::1685183568::1::::<><>::
+Water.png::CompressedTexture2D::3252865249560783789::1685183568::1685183568::1::::<><>::
+Wooden House.png::CompressedTexture2D::8149704127559762648::1685183568::1685183568::1::::<><>::
+::res://Tilesets/ground tiles/::1685183568
+::res://Tilesets/ground tiles/new tiles/::1685183568
+Grass hill tiles v.2.png::CompressedTexture2D::4231566171295357568::1685183568::1685183568::1::::<><>::
+Grass tiles v.2.png::CompressedTexture2D::1727971391109547523::1685183568::1685183568::1::::<><>::
+Tall Grass hill tiles v.2.png::CompressedTexture2D::8522887731011298925::1685183568::1685183568::1::::<><>::
+::res://Tilesets/ground tiles/old tiles/::1685183568
+Grass.png::CompressedTexture2D::1792060741474276035::1685183568::1685183568::1::::<><>::
+Hills.png::CompressedTexture2D::7375044507576214425::1685183568::1685183568::1::::<><>::
+Tilled Dirt.png::CompressedTexture2D::4710376306329056737::1685183568::1685183568::1::::<><>::

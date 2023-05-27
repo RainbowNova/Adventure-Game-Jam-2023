@@ -1,3 +1,5 @@
 res://TestingArea.tscn
 res://Player/Player.tscn
 res://Player/Player.gd
+res://Entities/Player/Player.tscn
+res://Entities/Player/Player.gd
