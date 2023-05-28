@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b4hg0yaghg3kh"]
+[gd_scene load_steps=19 format=3 uid="uid://b4hg0yaghg3kh"]
 
 [ext_resource type="Texture2D" uid="uid://yvbo3omu2a8j" path="res://Tilesets/ground tiles/new tiles/Grass tiles v.2.png" id="1_21vrk"]
 [ext_resource type="PackedScene" uid="uid://1ya2asdxxw7h" path="res://Entities/Player/Player.tscn" id="2_g7cx2"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bmlyhlarcy7mv" path="res://Tilesets/Water.png" id="5_0v28v"]
 [ext_resource type="Texture2D" uid="uid://dod1o3mdxsuqi" path="res://Tilesets/Wooden House.png" id="6_ic1mb"]
 [ext_resource type="Texture2D" uid="uid://b81fliyphuriy" path="res://Tilesets/jasper_tree_16b.png" id="7_yv2xm"]
+[ext_resource type="PackedScene" uid="uid://bva6a5he111tb" path="res://Entities/NPC/NPC.tscn" id="9_qao1o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_io2tm"]
 texture = ExtResource("1_21vrk")
@@ -712,7 +713,7 @@ layer_2/tile_data = PackedInt32Array(589841, 2, 0, 655377, 2, 1, 720913, 2, 2, 5
 
 [node name="Player" parent="." instance=ExtResource("2_g7cx2")]
 position = Vector2(300, 200)
-movement_speed = 200
+movement_speed = 50
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
@@ -725,22 +726,25 @@ limit_right = 640
 limit_bottom = 480
 editor_draw_limits = true
 
-[node name="BorderCollision" type="StaticBody2D" parent="."]
+[node name="LevelBorderCollision" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderCollision"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelBorderCollision"]
 position = Vector2(357, -2)
 shape = SubResource("RectangleShape2D_kl556")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="BorderCollision"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LevelBorderCollision"]
 position = Vector2(338, 491)
 shape = SubResource("RectangleShape2D_kl556")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="BorderCollision"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="LevelBorderCollision"]
 position = Vector2(647, 122)
 rotation = -1.57079
 shape = SubResource("RectangleShape2D_kl556")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="BorderCollision"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="LevelBorderCollision"]
 position = Vector2(-9, 111)
 rotation = 1.57079
 shape = SubResource("RectangleShape2D_kl556")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("9_qao1o")]
+position = Vector2(220, 166)

@@ -1,3 +1,4 @@
 res://Entities/Player/Player.tscn
 res://TestingArea.tscn
 res://Entities/Player/Player.gd
+res://Entities/NPC/NPC.tscn
