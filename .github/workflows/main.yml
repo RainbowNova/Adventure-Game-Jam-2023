@@ -4,14 +4,11 @@
   uses: yeslayla/build-godot-action@v1.4.1
   with:
     # Name of the exported binary
-    name: 
+    name: AdventureGameJam2023
     # Name of the preset in `export_presets.cfg` to use
-    preset: 
-    # Optional name of the subdirectory to put exported project in
-    subdirectory: # optional, default is 
+    preset: Windows Desktop
     # Set true to output an artifact zip file
-    package: # optional
+    package: false
     # Location of Godot project in repository
-    projectDir: # optional, default is .
     # Whether or not to use `--export-debug`
-    debugMode: # optional
+    debugMode: false
