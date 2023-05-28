@@ -672,6 +672,7 @@ sources/4 = SubResource("TileSetAtlasSource_ckgis")
 sources/5 = SubResource("TileSetAtlasSource_esjqp")
 
 [node name="TestingArea" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_qrtk2")
@@ -695,4 +696,10 @@ layer_2/z_index = -5
 layer_2/tile_data = PackedInt32Array(589841, 2, 0, 655377, 2, 1, 720913, 2, 2, 589842, 65538, 0, 655378, 65538, 1, 720914, 65538, 2, 589843, 131074, 0, 655379, 131074, 1, 720915, 131074, 2)
 
 [node name="Player" parent="." instance=ExtResource("2_g7cx2")]
+position = Vector2(300, 200)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(300, 200)
