@@ -746,5 +746,5 @@ position = Vector2(-9, 111)
 rotation = 1.57079
 shape = SubResource("RectangleShape2D_kl556")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("9_qao1o")]
+[node name="NPC" parent="." instance=ExtResource("9_qao1o")]
 position = Vector2(220, 166)
