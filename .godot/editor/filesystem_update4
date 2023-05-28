@@ -2,3 +2,6 @@ res://Entities/Player/Player.tscn
 res://TestingArea.tscn
 res://Entities/Player/Player.gd
 res://Entities/NPC/NPC.tscn
+res://Components/InteractableComponent.tscn
+res://Components/InteractableComponent.gd
+res://Entities/NPC/NPC.gd
