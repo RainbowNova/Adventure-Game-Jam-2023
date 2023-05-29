@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bmlyhlarcy7mv" path="res://Tilesets/Water.png" id="5_0v28v"]
 [ext_resource type="Texture2D" uid="uid://dod1o3mdxsuqi" path="res://Tilesets/Wooden House.png" id="6_ic1mb"]
 [ext_resource type="Texture2D" uid="uid://b81fliyphuriy" path="res://Tilesets/jasper_tree_16b.png" id="7_yv2xm"]
-[ext_resource type="PackedScene" uid="uid://df5qcspavxhic" path="res://Entities/NPC/NPC.tscn" id="9_qao1o"]
+[ext_resource type="PackedScene" uid="uid://bva6a5he111tb" path="res://Entities/NPC/NPC.tscn" id="9_qao1o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_io2tm"]
 texture = ExtResource("1_21vrk")
@@ -747,4 +747,4 @@ rotation = 1.57079
 shape = SubResource("RectangleShape2D_kl556")
 
 [node name="NPC" parent="." instance=ExtResource("9_qao1o")]
-position = Vector2(203, 182)
+position = Vector2(220, 166)
