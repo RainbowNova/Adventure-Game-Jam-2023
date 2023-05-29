@@ -21,6 +21,7 @@ func start_dialogue():
 
 func _process(delta):
 	if Input.is_action_just_pressed("interact"):
+		print("Hmmmm")
 		if finished:
 			next_phrase()
 		else:

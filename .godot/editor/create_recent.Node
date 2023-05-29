@@ -1,8 +1,9 @@
-VBoxContainer
 Timer
-Sprite2D
 RichTextLabel
+NinePatchRect
 Control
+VBoxContainer
+Sprite2D
 ColorRect
 CollisionShape2D
 Area2D

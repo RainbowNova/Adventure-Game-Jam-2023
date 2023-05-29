@@ -9,8 +9,8 @@ func _ready():
 	var interactable_component = get_node("InteractableComponent")
 	interactable_component.connect("interacted", start_dialogue)
 
-	
-func start_dialogue():
+
+func start_dialogue():	
 	var dialogue = DIALOGUE.instantiate()
-	get_parent().add_child(dialogue)
+	add_child(dialogue)
 	dialogue.start_dialogue()

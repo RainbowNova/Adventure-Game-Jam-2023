@@ -1,3 +1,8 @@
+res://Assets/Dialogue/Dialogue.tscn
+res://Assets/Dialogue/Dialogue.gd
 res://TestingArea.tscn
+res://Assets/InteractableComponent/InteractableComponent.tscn
+res://Entities/Player/Player.tscn
+res://Assets/InteractableComponent/InteractableComponent.gd
+res://Entities/Player/Player.gd
 res://Entities/NPC/NPC.tscn
-res://Assets/InteractableComponent.tscn
