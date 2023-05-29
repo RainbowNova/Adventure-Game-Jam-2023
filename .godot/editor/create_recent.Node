@@ -1,6 +1,6 @@
+CollisionShape2D
 Area2D
 Marker2D
-CollisionShape2D
 Sprite2D
 Node
 RichTextLabel
