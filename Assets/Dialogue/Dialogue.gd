@@ -2,8 +2,8 @@ extends Control
 
 signal interacted
 
-@export var dialogue_path = ""
-@export var text_speed = 0.05
+var dialogue_path = ""
+var text_speed = 0.05
 
 var dialogue
 
