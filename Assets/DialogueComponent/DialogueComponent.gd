@@ -1,8 +1,9 @@
 extends Control
 
 signal interacted
+signal dialogue_ended
 
-var dialogue_path = ""
+var current_dialogue_path
 var text_speed = 0.05
 
 var dialogue
@@ -11,7 +12,14 @@ var phrase_num = 0
 var finished = false
 
 
+func _ready():
+	current_dialogue_path = "res://DialogueFiles/test_dialogue.json"
+	hide()
+
+
 func start_dialogue():
+	show()
+	phrase_num = 0
 	# Create dialogue instance as child of the current area scene.	
 	$Timer.wait_time = text_speed
 	dialogue = get_dialogue()
@@ -21,7 +29,6 @@ func start_dialogue():
 
 func _process(delta):
 	if Input.is_action_just_pressed("interact"):
-		print("Hmmmm")
 		if finished:
 			next_phrase()
 		else:
@@ -29,9 +36,10 @@ func _process(delta):
 
 
 func get_dialogue():
-	var f = FileAccess.open("res://Assets/Dialogue/test_dialogue.json", FileAccess.READ)
+	# System that filters json file to find out which conversation dialogue is needed.
+	var f = FileAccess.open(current_dialogue_path, FileAccess.READ)
 	
-	f.open(dialogue_path, FileAccess.READ)
+	f.open(current_dialogue_path, FileAccess.READ)
 	var json = f.get_as_text()
 	
 	var output = JSON.parse_string(json)
@@ -40,11 +48,13 @@ func get_dialogue():
 		return output
 	else:
 		return []
-
+	
 
 func next_phrase():
 	if phrase_num >= len(dialogue):
-		queue_free()
+		emit_signal("dialogue_ended")
+		current_dialogue_path = "res://DialogueFiles/test_dialogue2.json" # Very temporary.
+		hide()
 		return
 	finished = false
 	$VBoxContainer/ColorRect/NameLabel.bbcode_text = dialogue[phrase_num]["Name"]
