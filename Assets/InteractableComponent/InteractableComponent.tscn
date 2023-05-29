@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dynw8kvqfuol"]
+[gd_scene load_steps=2 format=3 uid="uid://cst5lay50xspj"]
 
-[ext_resource type="Script" path="res://Assets/InteractableComponent.gd" id="1_pbeda"]
+[ext_resource type="Script" path="res://Assets/InteractableComponent/InteractableComponent.gd" id="1_pbeda"]
 
 [node name="InteractableComponent" type="Area2D"]
 collision_layer = 128
