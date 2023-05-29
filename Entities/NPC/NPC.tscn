@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Entities/NPC/NPC.gd" id="1_6mk23"]
 [ext_resource type="Texture2D" uid="uid://raa4k56c22rt" path="res://Entities/NPC/temp_npc.png" id="1_qp8ev"]
-[ext_resource type="PackedScene" path="res://Assets/InteractableComponent.tscn" id="3_nn2ax"]
+[ext_resource type="PackedScene" uid="uid://cst5lay50xspj" path="res://Assets/InteractableComponent/InteractableComponent.tscn" id="3_nn2ax"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ty0g2"]
 size = Vector2(5, 7)
