@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1ny5blhe54kf"]
+[gd_scene load_steps=5 format=3 uid="uid://c6fauy7ysj3qv"]
 
 [ext_resource type="Texture2D" uid="uid://c0qvauvq50l31" path="res://dialoguebox.png" id="1_l7odi"]
-[ext_resource type="Texture2D" uid="uid://cyufgujq701wv" path="res://portrait.png" id="2_1htli"]
+[ext_resource type="Texture2D" uid="uid://cyufgujq701wv" path="res://Entities/NPC/portrait.png" id="2_jtupq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i3yk6"]
 font_color = Color(0, 0, 0, 1)
@@ -34,7 +34,7 @@ layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("2_1htli")
+texture = ExtResource("2_jtupq")
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2

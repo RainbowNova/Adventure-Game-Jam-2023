@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dod1o3mdxsuqi" path="res://Tilesets/Wooden House.png" id="6_ic1mb"]
 [ext_resource type="Texture2D" uid="uid://b81fliyphuriy" path="res://Tilesets/jasper_tree_16b.png" id="7_yv2xm"]
 [ext_resource type="PackedScene" uid="uid://df5qcspavxhic" path="res://Entities/NPC/NPC.tscn" id="9_qao1o"]
-[ext_resource type="PackedScene" uid="uid://ylkal32dsf0d" path="res://Assets/DialogueComponent/DialogueComponent.tscn" id="10_8l6xn"]
+[ext_resource type="PackedScene" uid="uid://ptymqomev4vv" path="res://Assets/DialogueComponent/DialogueComponent.tscn" id="10_8l6xn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_io2tm"]
 texture = ExtResource("1_21vrk")

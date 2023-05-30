@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ylkal32dsf0d"]
+[gd_scene load_steps=3 format=3 uid="uid://ptymqomev4vv"]
 
-[ext_resource type="Script" path="res://DialogueComponent.gd" id="1_j76f3"]
-[ext_resource type="Texture2D" uid="uid://cyufgujq701wv" path="res://portrait.png" id="1_u4fqs"]
+[ext_resource type="Script" path="res://Assets/DialogueComponent/DialogueComponent.gd" id="1_i3e3g"]
+[ext_resource type="Texture2D" uid="uid://cyufgujq701wv" path="res://Entities/NPC/portrait.png" id="2_u7xqn"]
 
 [node name="MarginContainer" type="MarginContainer"]
 anchors_preset = 15
@@ -11,7 +11,7 @@ offset_right = -640.0
 offset_bottom = -581.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_j76f3")
+script = ExtResource("1_i3e3g")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -52,19 +52,20 @@ theme_override_constants/margin_bottom = 0
 
 [node name="Portrait" type="TextureRect" parent="VBoxContainer/HBoxContainer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("1_u4fqs")
+texture = ExtResource("2_u7xqn")
 expand_mode = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 15
+theme_override_constants/margin_bottom = 15
 
 [node name="DialogueLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(450, 0)
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 50
-text = "Tekst tekst tekst"
+theme_override_font_sizes/normal_font_size = 25
+bbcode_enabled = true
 
 [node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2

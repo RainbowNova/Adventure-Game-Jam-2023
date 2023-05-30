@@ -1,4 +1,5 @@
 res://TestingArea.tscn
+res://Assets/DialogueComponent/DialogueComponent.gd
 res://Assets/DialogueComponent/DialogueComponent.tscn
 res://testGUI2.tscn
 res://Entities/NPC/NPC.tscn

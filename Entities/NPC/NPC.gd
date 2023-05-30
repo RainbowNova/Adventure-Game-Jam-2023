@@ -14,4 +14,4 @@ func _ready():
 
 
 func send_dialogue_signal():
-	emit_signal("started_dialogue")
+	started_dialogue.emit(npc_name)

@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1jjeyuap2jdj"]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Texture2D" uid="uid://c0qvauvq50l31" path="res://dialoguebox.png" id="1_ilpyy"]
-[ext_resource type="Texture2D" uid="uid://cyufgujq701wv" path="res://portrait.png" id="2_y70yh"]
+[ext_resource type="Texture2D" uid="uid://cyufgujq701wv" path="res://Entities/NPC/portrait.png" id="2_y70yh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_n51wh"]
 font_color = Color(0, 0, 0, 1)
