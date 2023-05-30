@@ -3,21 +3,21 @@ extends Control
 signal interacted
 signal dialogue_ended
 
-var current_dialogue_path
+# These should be taken from the parent node somehow.
+# Easy way: give them as arguments through the parent function call start_dialogue
+# Feels like bad code, but would work.
+var npc_name
 var text_speed = 0.05
 
+var current_dialogue_path
 var dialogue
 
 var phrase_num = 0
 var finished = false
 
 
-func _ready():
-	current_dialogue_path = "res://DialogueFiles/test_dialogue.json"
-	hide()
-
-
-func start_dialogue():
+func start_dialogue(given_npc_name):
+	npc_name = given_npc_name
 	show()
 	phrase_num = 0
 	# Create dialogue instance as child of the current area scene.	
@@ -36,6 +36,7 @@ func _process(delta):
 
 
 func get_dialogue():
+	current_dialogue_path = "res://DialogueFiles/dialogue_" + str(npc_name) + ".json"
 	# System that filters json file to find out which conversation dialogue is needed.
 	var f = FileAccess.open(current_dialogue_path, FileAccess.READ)
 	
@@ -53,8 +54,7 @@ func get_dialogue():
 func next_phrase():
 	if phrase_num >= len(dialogue):
 		emit_signal("dialogue_ended")
-		current_dialogue_path = "res://DialogueFiles/test_dialogue2.json" # Very temporary.
-		hide()
+		queue_free()
 		return
 	finished = false
 	$VBoxContainer/ColorRect/NameLabel.bbcode_text = dialogue[phrase_num]["Name"]

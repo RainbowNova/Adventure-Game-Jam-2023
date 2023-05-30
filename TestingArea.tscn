@@ -713,7 +713,7 @@ layer_2/tile_data = PackedInt32Array(589841, 2, 0, 655377, 2, 1, 720913, 2, 2, 5
 
 [node name="Player" parent="." instance=ExtResource("2_g7cx2")]
 position = Vector2(300, 200)
-movement_speed = 50
+movement_speed = 500
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
