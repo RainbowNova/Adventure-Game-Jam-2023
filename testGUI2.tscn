@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1ny5blhe54kf"]
+
+[ext_resource type="Texture2D" uid="uid://c0qvauvq50l31" path="res://dialoguebox.png" id="1_l7odi"]
+[ext_resource type="Texture2D" uid="uid://cyufgujq701wv" path="res://portrait.png" id="2_1htli"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i3yk6"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_m4mua"]
+font_size = 13
+font_color = Color(0, 0, 0, 1)
+
+[node name="testGUI2" type="MarginContainer"]
+offset_right = 718.0
+offset_bottom = 67.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_l7odi")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Keano"
+label_settings = SubResource("LabelSettings_i3yk6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_1htli")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+text = "Tekst tekst tekst tekstTekst tekst tekst tekstTekst tekst tekst tekstTekst tekst tekst tekst"
+label_settings = SubResource("LabelSettings_m4mua")
+vertical_alignment = 3

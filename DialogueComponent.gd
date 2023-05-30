@@ -15,6 +15,8 @@ var dialogue
 var phrase_num = 0
 var finished = false
 
+@onready var dialogueLabel = $VBoxContainer/HBoxContainer/MarginContainer2/DialogueLabel
+@onready var nameLabel = $VBoxContainer/MarginContainer/NameLabel
 
 func start_dialogue(given_npc_name):
 	npc_name = given_npc_name
@@ -32,7 +34,7 @@ func _process(delta):
 		if finished:
 			next_phrase()
 		else:
-			$VBoxContainer/ColorRect/DialogueLabel.visible_characters = len($VBoxContainer/ColorRect/DialogueLabel.text)
+			dialogueLabel.visible_characters = len(dialogueLabel.text)
 
 
 func get_dialogue():
@@ -57,13 +59,13 @@ func next_phrase():
 		queue_free()
 		return
 	finished = false
-	$VBoxContainer/ColorRect/NameLabel.bbcode_text = dialogue[phrase_num]["Name"]
-	$VBoxContainer/ColorRect/DialogueLabel.bbcode_text = dialogue[phrase_num]["Text"]
+	nameLabel.bbcode_text = dialogue[phrase_num]["Name"]
+	dialogueLabel.bbcode_text = dialogue[phrase_num]["Text"]
 	
-	$VBoxContainer/ColorRect/DialogueLabel.visible_characters = 0
+	dialogueLabel.visible_characters = 0
 	
-	while $VBoxContainer/ColorRect/DialogueLabel.visible_characters < len($VBoxContainer/ColorRect/DialogueLabel.text):
-		$VBoxContainer/ColorRect/DialogueLabel.visible_characters += 1
+	while dialogueLabel.visible_characters < len(dialogueLabel.text):
+		dialogueLabel.visible_characters += 1
 		
 		$Timer.start()
 		await $Timer.timeout

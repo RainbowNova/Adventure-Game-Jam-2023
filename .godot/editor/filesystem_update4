@@ -1,5 +1,6 @@
 res://TestingArea.tscn
-res://Entities/NPC/NPC.tscn
 res://Assets/DialogueComponent/DialogueComponent.tscn
-res://Entities/Player/Player.tscn
-res://Entities/NPC/NPC.gd
+res://testGUI2.tscn
+res://Entities/NPC/NPC.tscn
+res://Assets/InteractableComponent/InteractableComponent.tscn
+res://TestingArea.gd
