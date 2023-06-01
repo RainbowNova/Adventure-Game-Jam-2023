@@ -1,5 +1,5 @@
-[
-	{"npc1": {"current_conversation_key": "intro_dialogue"}},
-	{"npc2": {"current_conversation_key": "intro_dialogue"}},
-	{"npc3": {"current_conversation_key": "intro_dialogue"}},
-]
+{
+	"knight1": {"current_conversation_key": "intro_dialogue"},
+	"npc2": {"current_conversation_key": "intro_dialogue"},
+	"npc3": {"current_conversation_key": "intro_dialogue"}
+}

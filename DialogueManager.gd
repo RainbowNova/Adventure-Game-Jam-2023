@@ -1,10 +1,28 @@
-extends Node
+extends Control
 
 var dialogue_manager_json_path
 var dialogue_file_json_path
 
 var dialogue_manager_json
 var dialogue_file_json
+var current_conversation_json # Feel like this isn't best OOP practice, but works for now.
+
+var next_conversation_key
+var current_line
+
+
+@onready var dialogue_label = $VBoxContainer/HBoxContainer/MarginContainer2/DialogueLabel
+@onready var name_label = $VBoxContainer/MarginContainer/NameLabel
+@onready var portrait = $VBoxContainer/HBoxContainer/MarginContainer/Portrait
+var portrait_string # Should use custom resources or something, but not implemented in Godot 4 in the way I need yet.
+
+var finished
+var now_you_may_skip
+var phrase_num
+
+var Name
+var Emotion
+var Text
 
 
 func _ready():
@@ -13,38 +31,45 @@ func _ready():
 	
 	dialogue_manager_json = get_parsed_json_file(dialogue_manager_json_path)
 	dialogue_file_json = get_parsed_json_file(dialogue_file_json_path)
-	
-	start_dialogue("npc1")
+
+
+func _process(delta):
+	skip_dialogue()
 
 
 func get_parsed_json_file(json_path):	
 	# System that filters json file to find out which conversation dialogue is needed.
 	if FileAccess.file_exists(json_path):
-		var data_file = FileAccess.open(json_path, FileAccess.READ)
+		var data_file = FileAccess.open(json_path, FileAccess.READ) # Never closing ==> Bad
 		var parsed_result = JSON.parse_string(data_file.get_as_text())
 		return parsed_result
 
 
 func start_dialogue(given_npc_name):
-	# If currently showing dialogue, stop dialogue process.
-	# if visible:
-	# return
-	# else:
+	# If currently already showing dialogue, stop dialogue process.
+	# Might be better to stop at the sending of the signal; potential technical debt for later.
+	if visible:
+		return
 
 	# Otherwise, start dialogue process: Use NPC name to get NPC conversation key
 	var current_conversation_key = get_conversation_key(given_npc_name)
+	
 	# If the current_conversation_key is null, dialogue can end here.
+	if current_conversation_key == null:
+		end_dialogue()
+		return
+	
+	phrase_num = 0
 	
 	# Else, if the CCK is not null, continue by getting the conversation data.
 	# E.g. name, dialogue, portrait, text_speed.
-	var dialogue_data = get_dialogue_data(given_npc_name, current_conversation_key)
-	go_through_dialogue_data(dialogue_data)
+	current_conversation_json = get_dialogue_data(given_npc_name, current_conversation_key)
+	show()
+	# Gets only called once per signal.
+	go_through_dialogue(current_conversation_json)
+	
 	
 func get_conversation_key(npc_name):
-	print(dialogue_manager_json)
-	for i in dialogue_manager_json:
-		print(i)
-		print(i[0])
 	# In DialogueFileManager.json, look for npc_name and find the current conversation_key
 	if dialogue_manager_json[npc_name] == null:
 		print("Something went wrong. NPC does not seem to have any dialogue.")
@@ -52,25 +77,82 @@ func get_conversation_key(npc_name):
 	elif dialogue_manager_json[npc_name]["current_conversation_key"] == null:
 		print("No more conversations exist for this NPC.")
 	# If current conversation key is not null, return conversation key.
-	else:
-		return (dialogue_manager_json[npc_name]["current_conversation_key"])
+	return (dialogue_manager_json[npc_name]["current_conversation_key"])
+
+
+func set_conversation_key(npc_name, conversation_key):
+	dialogue_manager_json[npc_name] = conversation_key
 
 
 func get_dialogue_data(npc_name, conversation_key):
-	pass	
-	# In DialogueFile.json, find the conversation key within the npc's 'dialogue tree'.
-	
-	# Return entire dialogue from the conversation. Do not filter yet. Separation of concerns.
+	var current_conversation_json = dialogue_file_json[npc_name][conversation_key]
+	return current_conversation_json
 
 
-# After getting the entire dialogue, go through it line by line.
-func go_through_dialogue_data(conversation_object):
-	pass
-	# conversation_object contains all lines within a conversation.
-	# Meaning every line type (regular, choice), name of speaker, emotion (for portrait + voice sound), type_speed and the dialogue text itself.
-	# EVENTUALLY make it so type_speed and maybe even emotion can be built into the json. For now just 1 for entire sentences.
+func go_through_dialogue(conversation_object):
+	# Check if there are any lines of dialogue left.	
+	if phrase_num >= len(conversation_object) - 1:
+		next_conversation_key = conversation_object[phrase_num]
+		print(next_conversation_key)
+		set_conversation_key(Name, next_conversation_key)
+		hide()
+		return
+	finished = false
+	# After every line, this function will be called.
+	# Line left ==> set variables for dialogue box.
 	
-	# Every line
-	# Set name to name_label
-	# Make it so emotion causes the correct portrait to appear + correct voice_sound to be played.
+	current_line = conversation_object[phrase_num]
+
+	# Might be useful for future functions like scanning_dialogue_lines for special characters and stuff?
+	Name = current_line["Name"]
+	Emotion = current_line["Emotion"]
+	Text = current_line["Text"]
 	
+	name_label.bbcode_text = Name
+	set_emotion_variables(Name, Emotion)
+	dialogue_label.bbcode_text = Text
+	
+	if conversation_object[phrase_num]["Emotion"] == "Neutral":
+		var type_speed = 0.05
+		$Timer.wait_time = type_speed
+	
+	
+	# Once the variables have been set, start playing the text (and animations and sounds).
+	dialogue_label.visible_characters = 0
+	while dialogue_label.visible_characters < len(dialogue_label.text):
+		if dialogue_label.visible_characters > 1 and !now_you_may_skip:
+			now_you_may_skip = true
+		dialogue_label.visible_characters += 1
+		
+		$Timer.start()
+		await $Timer.timeout
+
+	# Tells the Dialogue overlords that this line is finished.
+	phrase_num += 1
+	finished = true
+	return
+	
+
+# This entire function is ginormously scuffed, but it works.
+# Would prefer for portraits to be automatically changed based purely on the Emotion data by using Custom Resources.
+func set_emotion_variables(Name, Emotion):
+	var portrait_string = "res://Assets/Textures/" + Name + "_" + Emotion + ".png"
+	portrait.texture = load(portrait_string)
+	
+	# Eventually also add noise to play here.
+	
+	# Also add animation to play here? 
+
+
+func skip_dialogue():
+		# Skip dialogue or move to next.
+	if Input.is_action_just_pressed("interact"):
+		if finished:
+			go_through_dialogue(current_conversation_json)
+		else:
+			if now_you_may_skip:
+				dialogue_label.visible_characters = len(dialogue_label.text)
+
+
+func end_dialogue():
+	hide()
