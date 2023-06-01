@@ -41,6 +41,10 @@ func start_dialogue(given_npc_name):
 	go_through_dialogue_data(dialogue_data)
 	
 func get_conversation_key(npc_name):
+	print(dialogue_manager_json)
+	for i in dialogue_manager_json:
+		print(i)
+		print(i[0])
 	# In DialogueFileManager.json, look for npc_name and find the current conversation_key
 	if dialogue_manager_json[npc_name] == null:
 		print("Something went wrong. NPC does not seem to have any dialogue.")
@@ -64,6 +68,7 @@ func go_through_dialogue_data(conversation_object):
 	pass
 	# conversation_object contains all lines within a conversation.
 	# Meaning every line type (regular, choice), name of speaker, emotion (for portrait + voice sound), type_speed and the dialogue text itself.
+	# EVENTUALLY make it so type_speed and maybe even emotion can be built into the json. For now just 1 for entire sentences.
 	
 	# Every line
 	# Set name to name_label
