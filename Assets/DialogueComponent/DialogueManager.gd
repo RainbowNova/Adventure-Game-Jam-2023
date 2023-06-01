@@ -2,9 +2,6 @@ extends Control
 
 signal interacted
 
-# These should be taken from the parent node somehow.
-# Easy way: give them as arguments through the parent function call start_dialogue
-# Feels like bad code, but would work.
 var npc_name
 var text_speed = 0.05
 
@@ -22,6 +19,7 @@ var finished = false
 @onready var portrait = $VBoxContainer/HBoxContainer/MarginContainer/Portrait
 
 func start_dialogue(given_npc_name):
+	# Based on npc_name, find dialogue_key.
 	if !visible:
 		first_sentence = true
 		now_you_may_skip = false
@@ -37,6 +35,7 @@ func start_dialogue(given_npc_name):
 	
 
 func _process(delta):
+	# Skip dialogue or move to next.
 	if Input.is_action_just_pressed("interact"):
 		if finished:
 			next_phrase()
@@ -48,32 +47,28 @@ func _process(delta):
 func get_dialogue():
 	current_dialogue_path = "res://DialogueFiles/dialogue_" + str(npc_name) + ".json"
 	# System that filters json file to find out which conversation dialogue is needed.
-	var f = FileAccess.open(current_dialogue_path, FileAccess.READ)
-	
-	f.open(current_dialogue_path, FileAccess.READ)
-	var json = f.get_as_text()
-	
-	var output = JSON.parse_string(json)
-	
-	if typeof(output) == TYPE_ARRAY:
-		return output
-	else:
-		return []
+	if FileAccess.file_exists(current_dialogue_path):
+		var dataFile = FileAccess.open(current_dialogue_path, FileAccess.READ)
+		var parsedResult = JSON.parse_string(dataFile.get_as_text())
+		return parsedResult
 	
 
 func next_phrase():
+	# If there's no more lines...
 	if phrase_num >= len(dialogue):
 		hide()
 		return
-		
+	
 	finished = false
+	# Code for obtaining data from json file
 	name_label.bbcode_text = dialogue[phrase_num]["Name"]
 	dialogue_label.bbcode_text = dialogue[phrase_num]["Text"]
 	
+	# Typing / speaking animation
 	dialogue_label.visible_characters = 0
 	while dialogue_label.visible_characters < len(dialogue_label.text):
 		# I could not find any other way to prevent the insta-skip.
-		if dialogue_label.visible_characters > 5 and first_sentence and !now_you_may_skip:
+		if dialogue_label.visible_characters > 1 and first_sentence and !now_you_may_skip:
 			now_you_may_skip = true
 			first_sentence = false
 		dialogue_label.visible_characters += 1
@@ -81,6 +76,7 @@ func next_phrase():
 		$Timer.start()
 		await $Timer.timeout
 
+	# Go to next line
 	finished = true
 	phrase_num += 1
 	return

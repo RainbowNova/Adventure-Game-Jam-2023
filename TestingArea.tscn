@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b4hg0yaghg3kh"]
+[gd_scene load_steps=21 format=3 uid="uid://ofasko55ulyw"]
 
 [ext_resource type="Texture2D" uid="uid://yvbo3omu2a8j" path="res://Tilesets/ground tiles/new tiles/Grass tiles v.2.png" id="1_21vrk"]
 [ext_resource type="Script" path="res://TestingArea.gd" id="1_qt0qh"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dod1o3mdxsuqi" path="res://Tilesets/Wooden House.png" id="6_ic1mb"]
 [ext_resource type="Texture2D" uid="uid://b81fliyphuriy" path="res://Tilesets/jasper_tree_16b.png" id="7_yv2xm"]
 [ext_resource type="PackedScene" uid="uid://df5qcspavxhic" path="res://Entities/NPC/NPC.tscn" id="9_qao1o"]
-[ext_resource type="PackedScene" uid="uid://ptymqomev4vv" path="res://Assets/DialogueComponent/DialogueComponent.tscn" id="10_8l6xn"]
+[ext_resource type="PackedScene" uid="uid://cpv21ui8y1ehe" path="res://Assets/DialogueComponent/DialogueComponent.tscn" id="12_hdkxe"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_io2tm"]
 texture = ExtResource("1_21vrk")
@@ -754,10 +754,12 @@ position = Vector2(203, 182)
 
 [node name="GUI" type="CanvasLayer" parent="."]
 
-[node name="DialogueComponent" parent="GUI" instance=ExtResource("10_8l6xn")]
+[node name="DialogueComponent" parent="GUI" instance=ExtResource("12_hdkxe")]
 anchors_preset = 12
 anchor_top = 1.0
-offset_top = -139.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -158.0
 offset_right = 0.0
 offset_bottom = 0.0
 grow_vertical = 0

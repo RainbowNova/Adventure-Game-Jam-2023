@@ -1,12 +1,15 @@
-RichTextLabel
-MarginContainer
+AnimationPlayer
 PanelContainer
 VBoxContainer
-TextureRect
 HBoxContainer
+NinePatchRect
+TextureRect
+Node
+GridContainer
+RichTextLabel
+MarginContainer
 Control
 Label
-NinePatchRect
 Sprite2D
 CenterContainer
 ColorRect
@@ -15,7 +18,6 @@ Timer
 CollisionShape2D
 Area2D
 Marker2D
-Node
 CharacterBody2D
 StaticBody2D
 RemoteTransform2D

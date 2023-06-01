@@ -1,72 +1,78 @@
-[gd_scene load_steps=3 format=3 uid="uid://ptymqomev4vv"]
+[gd_scene load_steps=5 format=3 uid="uid://cpv21ui8y1ehe"]
 
-[ext_resource type="Script" path="res://Assets/DialogueComponent/DialogueComponent.gd" id="1_i3e3g"]
-[ext_resource type="Texture2D" uid="uid://cyufgujq701wv" path="res://Entities/NPC/portrait.png" id="2_u7xqn"]
+[ext_resource type="Script" path="res://DialogueManager.gd" id="1_v70qo"]
+[ext_resource type="Texture2D" uid="uid://lga2ir2hllkg" path="res://Assets/Textures/dialogue_border_threeparts.png" id="2_5v3yo"]
+[ext_resource type="Texture2D" uid="uid://c228pbbireeqx" path="res://Assets/Textures/eisai_neutral.png" id="3_5dqnp"]
+[ext_resource type="FontVariation" uid="uid://brwhk11sav51b" path="res://Assets/Fonts/base_font.tres" id="3_wpuli"]
 
 [node name="MarginContainer" type="MarginContainer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -640.0
-offset_bottom = -581.0
+offset_right = 650.0
+offset_bottom = 144.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_i3e3g")
+script = ExtResource("1_v70qo")
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="VBoxContainer2"]
-layout_mode = 2
-size_flags_vertical = 3
-color = Color(0.85098, 0.85098, 0.85098, 1)
+texture = ExtResource("2_5v3yo")
+region_rect = Rect2(0, 0, 96, 32)
+patch_margin_left = 1
+patch_margin_right = 1
 
 [node name="Timer" type="Timer" parent="."]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+[node name="CoversTopPixelRowOfDialogueBx" type="PanelContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 9)
 layout_mode = 2
-theme_override_constants/margin_left = 15
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_bottom = -5
 
 [node name="NameLabel" type="RichTextLabel" parent="VBoxContainer/MarginContainer"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_wpuli")
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
-text = "Keano"
+text = "Eisai"
 fit_content = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 100)
+custom_minimum_size = Vector2(650, 100)
 layout_mode = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 15
+theme_override_constants/margin_left = 35
 theme_override_constants/margin_top = 0
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 0
 
 [node name="Portrait" type="TextureRect" parent="VBoxContainer/HBoxContainer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("2_u7xqn")
+texture = ExtResource("3_5dqnp")
 expand_mode = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/margin_bottom = 15
 
 [node name="DialogueLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/MarginContainer2"]
 custom_minimum_size = Vector2(450, 0)
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_wpuli")
 theme_override_font_sizes/normal_font_size = 25
 bbcode_enabled = true
+text = "Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst Tekst "
 
-[node name="MarginContainer3" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 15)
 layout_mode = 2
-theme_override_constants/margin_right = 15

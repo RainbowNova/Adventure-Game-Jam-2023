@@ -1,0 +1,11 @@
+{
+	"npc1": {
+		"current_conversation_key": "intro_talk"
+	},
+	"npc2": {
+		"current_conversation_key": "intro_talk"
+	},
+	"npc3": {
+		"current_conversation_key": "intro_talk"
+	}
+}
