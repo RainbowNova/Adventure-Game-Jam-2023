@@ -9,14 +9,16 @@
 		"second_dialogue": [
 			{"Name": "knight1", "Emotion": "Neutral", "Text": "Have you returned to heal me, Eisai?"},
 			{"Name": "Eisai", "Emotion": "Neutral", "Text": "I am Eisai. I bring thea."},
-			{"Name": "knight1", "Emotion": "Neutral", "Text": "Epic."}
+			{"Name": "knight1", "Emotion": "Neutral", "Text": "Epic."},
+			null
 		]
 	},
 	"npc2": {
 		"intro_dialogue": [
 			{"Name": "Eisai", "Emotion": "Neutral","Text": "Dialogue for npc2"},
 			{"Name": "Eisai", "Emotion": "Neutral", "Text": "Dialogue for npc2"},
-			{"Name": "Eisai", "Emotion": "Neutral", "Text": "Dialogue for npc2"}
+			{"Name": "Eisai", "Emotion": "Neutral", "Text": "Dialogue for npc2"},
+			null
 		]
 	}
 }

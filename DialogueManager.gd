@@ -81,7 +81,7 @@ func get_conversation_key(npc_name):
 
 
 func set_conversation_key(npc_name, conversation_key):
-	dialogue_manager_json[npc_name] = conversation_key
+	dialogue_manager_json[npc_name]["current_conversation_key"] = conversation_key
 
 
 func get_dialogue_data(npc_name, conversation_key):
