@@ -81,6 +81,9 @@ func get_conversation_key(npc_name):
 
 
 func set_conversation_key(npc_name, conversation_key):
+	# This entire part of the system should be refactored sometime.
+	# For now it works. But this does not actually write to the json file! Just to the currently
+	# saved variable containing the dialogue from the json file!
 	dialogue_manager_json[npc_name]["current_conversation_key"] = conversation_key
 
 
@@ -88,7 +91,9 @@ func get_dialogue_data(npc_name, conversation_key):
 	var current_conversation_json = dialogue_file_json[npc_name][conversation_key]
 	return current_conversation_json
 
-
+# Right now this function goes through the dialogue and 'reads' it ==> puts it into dialogue box.
+# Ideally this should only read and put everything into place for another function to actually decide what to do.
+# So what is the name, what is the dialogue, but also are there choices or conditions?
 func go_through_dialogue(conversation_object):
 	# Check if there are any lines of dialogue left.	
 	if phrase_num >= len(conversation_object) - 1:

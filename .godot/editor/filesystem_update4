@@ -1,6 +1,4 @@
 res://TestingArea.tscn
-res://Dialogue/DialogueFile.json
-res://Dialogue/DialogueManager.json
 res://Entities/NPC/NPC.tscn
 res://Assets/InteractableComponent/InteractableComponent.tscn
 res://Entities/Player/Player.tscn
