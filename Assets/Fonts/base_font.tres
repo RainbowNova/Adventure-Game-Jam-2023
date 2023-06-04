@@ -1,0 +1,6 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://brwhk11sav51b"]
+
+[ext_resource type="FontFile" uid="uid://cp73elehxdy0o" path="res://Assets/Fonts/Alkhemikal.ttf" id="1_4q4qf"]
+
+[resource]
+base_font = ExtResource("1_4q4qf")

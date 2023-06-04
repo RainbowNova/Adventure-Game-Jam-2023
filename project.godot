@@ -13,13 +13,19 @@ config_version=5
 config/name="Adventure Game Jam 2023"
 run/main_scene="res://TestingArea.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
-config/icon="res://Entities/temp_player.png"
+config/icon="res://icon.png"
 
 [display]
 
-window/size/viewport_width=640
-window/size/viewport_height=480
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/scale=2.0
+window/size/width=1366
+window/size/height=768
+
+[gdnative]
+
+singletons=[]
 
 [input]
 

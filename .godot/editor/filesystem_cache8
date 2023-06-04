@@ -1,29 +1,46 @@
 2a60927148abd1d33b818b535e306557
-::res://::1685305281
+::res://::1685912974
+DialogueManager.gd::GDScript::-1::1685728680::0::1::::<>Control<>::
 export_presets.cfg::TextFile::-1::1685296345::0::1::::<><>::
 icon.svg::CompressedTexture2D::4535915949084907462::1685182174::1685182185::1::::<><>::
-TestingArea.tscn::PackedScene::4436758001121318699::1685305281::0::1::::<><>::uid://yvbo3omu2a8j<>uid://1ya2asdxxw7h<>uid://b1j2jn0s1ugiy<>uid://dtosylmw1fd70<>uid://b6qe2kna338pv<>uid://bmlyhlarcy7mv<>uid://dod1o3mdxsuqi<>uid://b81fliyphuriy<>uid://bva6a5he111tb
-::res://Assets/::1685305091
-::res://Entities/::1685296514
-::res://Entities/NPC/::1685305396
-NPC.gd::GDScript::-1::1685303247::0::1::::<>CharacterBody2D<>::
-NPC.tscn::PackedScene::3862270213599215775::1685305281::0::1::::<><>::res://Entities/NPC/NPC.gd<>uid://raa4k56c22rt
+TestingArea.gd::GDScript::-1::1685573306::0::1::::<>Node2D<>::
+TestingArea.tscn::PackedScene::992998392257756082::1685728496::0::1::::<><>::res://TestingArea.gd<>uid://1ya2asdxxw7h<>uid://h47k4f7lug60<>uid://0c7gri73fiak<>res://DialogueManager.gd<>uid://df5qcspavxhic<>uid://cpv21ui8y1ehe
+::res://Assets/::1685571167
+::res://Assets/DialogueComponent/::1685728680
+DialogueComponent.tscn::PackedScene::5870712808596071026::1685728680::0::1::::<><>::res://Assets/DialogueComponent/DialogueManager.gd<>uid://lga2ir2hllkg<>uid://c228pbbireeqx<>uid://brwhk11sav51b
+DialogueManager.gd::GDScript::-1::1685572844::0::1::::<>Control<>::
+::res://Assets/Fonts/::1685571735
+alagard.ttf::FontFile::8963617120848568202::1685571163::1685571168::1::::<><>::
+Alkhemikal.ttf::FontFile::5893441913344680744::1685571163::1685571168::1::::<><>::
+base_font.tres::FontVariation::3625491619608098005::1685571735::0::1::::<><>::uid://cp73elehxdy0o
+::res://Assets/InteractableComponent/::1685728496
+InteractableComponent.gd::GDScript::-1::1685386214::0::1::::<>Area2D<>::
+InteractableComponent.tscn::PackedScene::6077304922186570967::1685728496::0::1::::<><>::res://Assets/InteractableComponent/InteractableComponent.gd
+::res://Assets/Textures/::1685568937
+bucket_knight_neutral.png::CompressedTexture2D::5320788387967820449::1685567303::1685567305::1::::<><>::
+dialogue_border.png::CompressedTexture2D::5870183040163910420::1685567303::1685567306::1::::<><>::
+dialogue_bordernew.png::CompressedTexture2D::5157854320721226420::1685567892::1685567892::1::::<><>::
+dialogue_border_threeparts.png::CompressedTexture2D::784512210663179502::1685568934::1685568937::1::::<><>::
+eisai_neutral.png::CompressedTexture2D::6725708847097075255::1685567303::1685567307::1::::<><>::
+knight1_neutral.png::CompressedTexture2D::7943050609311462633::1685567303::1685567310::1::::<><>::
+random_spooper_neutral.png::CompressedTexture2D::4143441484761813674::1685567303::1685567309::1::::<><>::
+::res://Dialogue/::1685633204
+DialogueFile.json::JSON::-1::1685633204::0::1::::<><>::
+DialogueManager.json::JSON::-1::1685633064::0::1::::<><>::
+::res://DialogueFiles/::1685627999
+dialogue_npc1.json::JSON::-1::1685570755::0::1::::<><>::
+dialogue_npc2.json::JSON::-1::1685627999::0::1::::<><>::
+::res://Entities/::1685482698
+::res://Entities/NPC/::1685728496
+NPC.gd::GDScript::-1::1685604534::0::1::::<>CharacterBody2D<>::
+NPC.tscn::PackedScene::7573113613984675830::1685728496::0::1::::<><>::res://Entities/NPC/NPC.gd<>uid://raa4k56c22rt<>uid://cst5lay50xspj
+portrait.png::CompressedTexture2D::6498976534648422129::1685476510::1685482699::1::::<><>::
 temp_npc.png::CompressedTexture2D::1193262702859690265::1685296525::1685296525::1::::<><>::
-::res://Entities/Player/::1685305281
-Player.gd::GDScript::-1::1685291800::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::1874503245096160807::1685305281::0::1::::<><>::res://Entities/Player/Player.gd<>uid://6xoagf3wq1q8
+::res://Entities/Player/::1685728496
+Eisai_Sheet.png::CompressedTexture2D::4610988905817124342::1685575823::1685575823::1::::<><>::
+Player.gd::GDScript::-1::1685577916::0::1::::<>CharacterBody2D<>::
+Player.tscn::PackedScene::1874503245096160807::1685728496::0::1::::<><>::res://Entities/Player/Player.gd<>uid://b6xukwr6rrdqs
 temp_player.png::CompressedTexture2D::2224185203187482953::1685182353::1685183487::1::::<><>::
-::res://Tilesets/::1685291461
-Fences.png::CompressedTexture2D::4595596510298074871::1685183568::1685183568::1::::<><>::
-jasper_tree_16b.png::CompressedTexture2D::4756650032004308956::1685291455::1685291461::1::::<><>::
-Water.png::CompressedTexture2D::3252865249560783789::1685183568::1685183568::1::::<><>::
-Wooden House.png::CompressedTexture2D::8149704127559762648::1685183568::1685183568::1::::<><>::
-::res://Tilesets/ground tiles/::1685183568
-::res://Tilesets/ground tiles/new tiles/::1685183568
-Grass hill tiles v.2.png::CompressedTexture2D::4231566171295357568::1685183568::1685183568::1::::<><>::
-Grass tiles v.2.png::CompressedTexture2D::1727971391109547523::1685183568::1685183568::1::::<><>::
-Tall Grass hill tiles v.2.png::CompressedTexture2D::8522887731011298925::1685183568::1685183568::1::::<><>::
-::res://Tilesets/ground tiles/old tiles/::1685183568
-Grass.png::CompressedTexture2D::1792060741474276035::1685183568::1685183568::1::::<><>::
-Hills.png::CompressedTexture2D::7375044507576214425::1685183568::1685183568::1::::<><>::
-Tilled Dirt.png::CompressedTexture2D::4710376306329056737::1685183568::1685183568::1::::<><>::
+::res://Tilesets/::1685604715
+basic_tileset.png::CompressedTexture2D::553151194412139615::1685604715::1685604715::1::::<><>::
+Object_Tileset.png::CompressedTexture2D::1760804411737829906::1685604715::1685604715::1::::<><>::
