@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://4dfca7px6dop"]
+[gd_scene load_steps=3 format=3 uid="uid://4dfca7px6dop"]
 
 [ext_resource type="FontVariation" uid="uid://brwhk11sav51b" path="res://Assets/Fonts/base_font.tres" id="1_yl8vk"]
+[ext_resource type="AudioStream" uid="uid://bq8cvkahqusxf" path="res://Assets/Sounds/Way-of-Tea.mp3" id="2_vq62m"]
 
 [node name="Main Menu" type="MarginContainer"]
 anchors_preset = 15
@@ -8,6 +9,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 2
+color = Color(0.286275, 0.192157, 0.415686, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -80,3 +85,8 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("1_yl8vk")
 theme_override_font_sizes/font_size = 50
 text = "Quit game"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vq62m")
+volume_db = -22.286
+autoplay = true

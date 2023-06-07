@@ -1,10 +1,11 @@
+AudioStreamPlayer
+ColorRect
 MarginContainer
 MenuButton
 CenterContainer
 VBoxContainer
 Label
 RichTextLabel
-ColorRect
 AudioStreamPlayer2D
 AudioListener2D
 AnimationPlayer
