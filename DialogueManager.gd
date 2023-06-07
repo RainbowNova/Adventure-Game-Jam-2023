@@ -66,7 +66,7 @@ func start_dialogue(given_npc_name):
 	current_conversation_json = get_dialogue_data(given_npc_name, current_conversation_key)
 	show()
 	# Gets only called once per signal.
-	go_through_dialogue(current_conversation_json)
+	scan_dialogue_data(current_conversation_json)
 	
 	
 func get_conversation_key(npc_name):
@@ -91,14 +91,14 @@ func get_dialogue_data(npc_name, conversation_key):
 	var current_conversation_json = dialogue_file_json[npc_name][conversation_key]
 	return current_conversation_json
 
+
 # Right now this function goes through the dialogue and 'reads' it ==> puts it into dialogue box.
 # Ideally this should only read and put everything into place for another function to actually decide what to do.
 # So what is the name, what is the dialogue, but also are there choices or conditions?
-func go_through_dialogue(conversation_object):
+func scan_dialogue_data(conversation_object):
 	# Check if there are any lines of dialogue left.	
 	if phrase_num >= len(conversation_object) - 1:
 		next_conversation_key = conversation_object[phrase_num]
-		print(next_conversation_key)
 		set_conversation_key(Name, next_conversation_key)
 		hide()
 		return
@@ -107,7 +107,6 @@ func go_through_dialogue(conversation_object):
 	# Line left ==> set variables for dialogue box.
 	
 	current_line = conversation_object[phrase_num]
-
 	# Might be useful for future functions like scanning_dialogue_lines for special characters and stuff?
 	Name = current_line["Name"]
 	Emotion = current_line["Emotion"]
@@ -136,13 +135,15 @@ func go_through_dialogue(conversation_object):
 	phrase_num += 1
 	finished = true
 	return
-	
+
 
 # This entire function is ginormously scuffed, but it works.
 # Would prefer for portraits to be automatically changed based purely on the Emotion data by using Custom Resources.
 func set_emotion_variables(Name, Emotion):
 	var portrait_string = "res://Assets/Textures/" + Name + "_" + Emotion + ".png"
 	portrait.texture = load(portrait_string)
+	
+	# Set typing speed?
 	
 	# Eventually also add noise to play here.
 	
@@ -153,11 +154,11 @@ func skip_dialogue():
 		# Skip dialogue or move to next.
 	if Input.is_action_just_pressed("interact"):
 		if finished:
-			go_through_dialogue(current_conversation_json)
+			scan_dialogue_data(current_conversation_json)
 		else:
 			if now_you_may_skip:
 				dialogue_label.visible_characters = len(dialogue_label.text)
 
 
 func end_dialogue():
-	hide()
+	hide() # TODO: EVENTUALLY (post-game-jam) turn this into queue_free()
