@@ -3,4 +3,3 @@ res://Entities/NPC/NPC.tscn
 res://Assets/InteractableComponent/InteractableComponent.tscn
 res://Entities/Player/Player.tscn
 res://Assets/DialogueComponent/DialogueComponent.tscn
-res://DialogueManager.gd
