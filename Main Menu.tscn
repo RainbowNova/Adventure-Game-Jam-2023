@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://4dfca7px6dop"]
+[gd_scene load_steps=4 format=3 uid="uid://4dfca7px6dop"]
 
+[ext_resource type="Script" path="res://Main Menu.gd" id="1_pv6g7"]
 [ext_resource type="FontVariation" uid="uid://brwhk11sav51b" path="res://Assets/Fonts/base_font.tres" id="1_yl8vk"]
 [ext_resource type="AudioStream" uid="uid://bq8cvkahqusxf" path="res://Assets/Sounds/Way-of-Tea.mp3" id="2_vq62m"]
 
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_pv6g7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 2
@@ -88,5 +90,9 @@ text = "Quit game"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_vq62m")
-volume_db = -22.286
+volume_db = -5.306
 autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer/CenterContainer2/VBoxContainer/CenterContainer/MenuButton Start game" to="." method="_on_menu_button_start_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/CenterContainer2/VBoxContainer/CenterContainer2/MenuButton Credits" to="." method="_on_menu_button_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/CenterContainer2/VBoxContainer/CenterContainer3/MenuButton Quit game" to="." method="_on_menu_button_quit_game_pressed"]

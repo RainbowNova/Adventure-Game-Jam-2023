@@ -6,10 +6,9 @@
 [ext_resource type="FontVariation" uid="uid://brwhk11sav51b" path="res://Assets/Fonts/base_font.tres" id="3_wpuli"]
 
 [node name="MarginContainer" type="MarginContainer"]
+offset_top = -8.5
 offset_right = 650.0
-offset_bottom = 144.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_bottom = 152.5
 script = ExtResource("1_4il5g")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]

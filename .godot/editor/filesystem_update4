@@ -4,3 +4,6 @@ res://Assets/InteractableComponent/InteractableComponent.tscn
 res://Entities/Player/Player.tscn
 res://Assets/DialogueComponent/DialogueComponent.tscn
 res://Main Menu.tscn
+res://Main Menu.gd
+res://Scene Transition.tscn
+res://Scene Transition.gd

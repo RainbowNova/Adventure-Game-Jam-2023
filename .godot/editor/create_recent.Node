@@ -1,5 +1,7 @@
-AudioStreamPlayer
+AnimationPlayer
 ColorRect
+CanvasLayer
+AudioStreamPlayer
 MarginContainer
 MenuButton
 CenterContainer
@@ -8,7 +10,6 @@ Label
 RichTextLabel
 AudioStreamPlayer2D
 AudioListener2D
-AnimationPlayer
 PanelContainer
 HBoxContainer
 NinePatchRect
@@ -17,7 +18,6 @@ Node
 GridContainer
 Control
 Sprite2D
-CanvasLayer
 Timer
 CollisionShape2D
 Area2D
