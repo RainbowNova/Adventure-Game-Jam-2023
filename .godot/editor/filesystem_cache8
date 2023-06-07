@@ -1,21 +1,24 @@
 2a60927148abd1d33b818b535e306557
-::res://::1686145248
+::res://::1686163277
 DialogueManager.gd::GDScript::-1::1685979688::0::1::::<>Control<>::
 export_presets.cfg::TextFile::-1::1685296345::0::1::::<><>::
 icon.svg::CompressedTexture2D::4535915949084907462::1685182174::1685182185::1::::<><>::
+Main Menu.gd::GDScript::-1::1686148709::0::1::::<>MarginContainer<>::
+Main Menu.tscn::PackedScene::2041976805463991359::1686148759::0::1::::<><>::res://Main Menu.gd<>uid://brwhk11sav51b<>uid://bq8cvkahqusxf
+Scene Transition.tscn::PackedScene::7572469339609009311::1686148757::0::1::::<><>::
 TestingArea.gd::GDScript::-1::1685573306::0::1::::<>Node2D<>::
-TestingArea.tscn::PackedScene::992998392257756082::1686145215::0::1::::<><>::res://TestingArea.gd<>uid://1ya2asdxxw7h<>uid://d0mtuqspcac6a<>uid://i46nu43rcghh<>res://DialogueManager.gd<>uid://coib1tvpnv4fh<>uid://df5qcspavxhic<>uid://cpv21ui8y1ehe
+TestingArea.tscn::PackedScene::992998392257756082::1686148758::0::1::::<><>::res://TestingArea.gd<>uid://1ya2asdxxw7h<>uid://d0mtuqspcac6a<>uid://i46nu43rcghh<>res://DialogueManager.gd<>uid://coib1tvpnv4fh<>uid://df5qcspavxhic<>uid://cpv21ui8y1ehe
 ::res://Assets/::1686145248
-::res://Assets/DialogueComponent/::1686145207
-DialogueComponent.tscn::PackedScene::5870712808596071026::1686145207::0::1::::<><>::res://Assets/DialogueComponent/DialogueManager.gd<>uid://lga2ir2hllkg<>uid://c228pbbireeqx<>uid://brwhk11sav51b
+::res://Assets/DialogueComponent/::1686148758
+DialogueComponent.tscn::PackedScene::5870712808596071026::1686148758::0::1::::<><>::res://Assets/DialogueComponent/DialogueManager.gd<>uid://lga2ir2hllkg<>uid://c228pbbireeqx<>uid://brwhk11sav51b
 DialogueManager.gd::GDScript::-1::1685572844::0::1::::<>Control<>::
 ::res://Assets/Fonts/::1685571735
 alagard.ttf::FontFile::8963617120848568202::1685571163::1685571168::1::::<><>::
 Alkhemikal.ttf::FontFile::5893441913344680744::1685571163::1685571168::1::::<><>::
 base_font.tres::FontVariation::3625491619608098005::1685571735::0::1::::<><>::uid://cp73elehxdy0o
-::res://Assets/InteractableComponent/::1686145207
+::res://Assets/InteractableComponent/::1686148758
 InteractableComponent.gd::GDScript::-1::1685386214::0::1::::<>Area2D<>::
-InteractableComponent.tscn::PackedScene::6077304922186570967::1686145207::0::1::::<><>::res://Assets/InteractableComponent/InteractableComponent.gd
+InteractableComponent.tscn::PackedScene::6077304922186570967::1686148758::0::1::::<><>::res://Assets/InteractableComponent/InteractableComponent.gd
 ::res://Assets/Sounds/::1686145104
 Flowing-Waters.mp3::AudioStreamMP3::5772108379069735741::1686145083::1686145104::1::::<><>::
 Way-of-Tea.mp3::AudioStreamMP3::3577726109016866011::1686145083::1686145101::1::::<><>::
@@ -29,7 +32,7 @@ eisai_neutral.png::CompressedTexture2D::6725708847097075255::1685567303::1685567
 knight1_neutral.png::CompressedTexture2D::7943050609311462633::1685567303::1685567310::1::::<><>::
 Object_Tileset.png::CompressedTexture2D::623284242629842925::1686142143::1686142143::1::::<><>::
 random_spooper_neutral.png::CompressedTexture2D::4143441484761813674::1685567303::1685567309::1::::<><>::
-::res://Assets/Tilesets/::1685604715
+::res://Assets/Tilesets/::1686145248
 basic_tileset.png::CompressedTexture2D::553151194412139615::1685604715::1686145248::1::::<><>::
 Object_Tileset.png::CompressedTexture2D::1760804411737829906::1685604715::1686145248::1::::<><>::
 ::res://Dialogue/::1685633204
@@ -38,15 +41,15 @@ DialogueManager.json::JSON::-1::1685633064::0::1::::<><>::
 ::res://DialogueFiles/::1685627999
 dialogue_npc1.json::JSON::-1::1685570755::0::1::::<><>::
 dialogue_npc2.json::JSON::-1::1685627999::0::1::::<><>::
-::res://docs/::1686144361
+::res://docs/::1686149037
 ::res://Entities/::1685482698
-::res://Entities/NPC/::1686145207
+::res://Entities/NPC/::1686148758
 NPC.gd::GDScript::-1::1685604534::0::1::::<>CharacterBody2D<>::
-NPC.tscn::PackedScene::7573113613984675830::1686145207::0::1::::<><>::res://Entities/NPC/NPC.gd<>uid://raa4k56c22rt<>uid://cst5lay50xspj
+NPC.tscn::PackedScene::7573113613984675830::1686148758::0::1::::<><>::res://Entities/NPC/NPC.gd<>uid://raa4k56c22rt<>uid://cst5lay50xspj
 portrait.png::CompressedTexture2D::6498976534648422129::1685476510::1685482699::1::::<><>::
 temp_npc.png::CompressedTexture2D::1193262702859690265::1685296525::1685296525::1::::<><>::
-::res://Entities/Player/::1686145207
+::res://Entities/Player/::1686148758
 Eisai_Sheet.png::CompressedTexture2D::4610988905817124342::1685575823::1685575823::1::::<><>::
 Player.gd::GDScript::-1::1685577916::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::1874503245096160807::1686145207::0::1::::<><>::res://Entities/Player/Player.gd<>uid://b6xukwr6rrdqs
+Player.tscn::PackedScene::1874503245096160807::1686148758::0::1::::<><>::res://Entities/Player/Player.gd<>uid://b6xukwr6rrdqs
 temp_player.png::CompressedTexture2D::2224185203187482953::1685182353::1685183487::1::::<><>::

@@ -1,3 +1,5 @@
+HBoxContainer
+HSlider
 AnimationPlayer
 ColorRect
 CanvasLayer
@@ -11,7 +13,6 @@ RichTextLabel
 AudioStreamPlayer2D
 AudioListener2D
 PanelContainer
-HBoxContainer
 NinePatchRect
 TextureRect
 Node

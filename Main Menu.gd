@@ -17,3 +17,8 @@ func _on_menu_button_credits_pressed():
 
 func _on_menu_button_quit_game_pressed():
 	pass # Replace with function body.
+
+
+func _on_h_slider_value_changed(value):
+	var _bus = AudioServer.get_bus_index("Master")
+	AudioServer.set_bus_volume_db(_bus, linear_to_db(value) * 0.25)
