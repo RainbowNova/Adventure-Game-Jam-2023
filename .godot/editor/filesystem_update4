@@ -5,3 +5,6 @@ res://Assets/DialogueComponent/DialogueComponent.tscn
 res://TestingArea.tscn
 res://Main Menu.tscn
 res://Main Menu.gd
+res://World.tscn
+res://World.gd
+res://Scene Transition.tscn

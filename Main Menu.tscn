@@ -98,7 +98,7 @@ offset_left = 1056.0
 offset_top = 632.0
 offset_right = 1272.0
 offset_bottom = 720.0
-value = 100.0
+value = 50.0
 
 [connection signal="pressed" from="VBoxContainer/MarginContainer/CenterContainer2/VBoxContainer/CenterContainer/MenuButton Start game" to="." method="_on_menu_button_start_game_pressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer/CenterContainer2/VBoxContainer/CenterContainer2/MenuButton Credits" to="." method="_on_menu_button_credits_pressed"]
