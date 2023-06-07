@@ -19,7 +19,6 @@ config/icon="res://icon.png"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/scale=2.0
 window/size/width=1366
 window/size/height=768
 
