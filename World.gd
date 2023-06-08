@@ -11,7 +11,7 @@ var _temp_game_bus
 
 func _ready():
 	remove_child(main_game)
-	main_game.connect("test_button", show_chapter)
+	main_game.connect("show_chapter_transition", show_chapter)
 	$"Main Menu".connect("start_game", swap_to_game)
 	
 	camera.enabled = false

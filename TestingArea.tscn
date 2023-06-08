@@ -318,12 +318,3 @@ script = ExtResource("7_jydv5")
 [node name="Background music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_66uyh")
 autoplay = true
-
-[node name="Button" type="Button" parent="."]
-offset_left = 32.0
-offset_top = 336.0
-offset_right = 240.0
-offset_bottom = 367.0
-text = "TEEEEEEEEEEEST BUTTON!"
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
