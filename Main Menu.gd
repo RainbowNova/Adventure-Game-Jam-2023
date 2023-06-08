@@ -1,5 +1,7 @@
 extends MarginContainer
 
+signal start_game
+
 var _main_menu_bus
 var _temp_game_bus
 
@@ -9,7 +11,7 @@ func _ready():
 
 
 func _on_menu_button_start_game_pressed():
-	get_tree().change_scene_to_file("res://TestingArea.tscn")
+	emit_signal("start_game")
 	
 
 func _on_menu_button_credits_pressed():
@@ -21,4 +23,6 @@ func _on_menu_button_quit_game_pressed():
 
 
 func _on_h_slider_value_changed(value):
-	emit_signal("volume_changed_signal", value)
+	pass
+	# Couldn't get this to work, figured out why, no time to fix it now however.
+	# Solution: signal up to World.gd and set volume for all scenes there.

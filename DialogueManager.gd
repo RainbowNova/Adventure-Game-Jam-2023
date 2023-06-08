@@ -97,7 +97,7 @@ func get_dialogue_data(npc_name, conversation_key):
 # So what is the name, what is the dialogue, but also are there choices or conditions?
 func scan_dialogue_data(conversation_object):
 	# Check if there are any lines of dialogue left.	
-	if phrase_num >= len(conversation_object) - 1:
+	if phrase_num >= len(conversation_object) - 1 and may_proceed_to_next_dialogue():
 		next_conversation_key = conversation_object[phrase_num]
 		set_conversation_key(Name, next_conversation_key)
 		hide()
@@ -162,3 +162,7 @@ func skip_dialogue():
 
 func end_dialogue():
 	hide() # TODO: EVENTUALLY (post-game-jam) turn this into queue_free()
+
+
+func may_proceed_to_next_dialogue():
+	return true

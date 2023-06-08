@@ -1,15 +1,15 @@
 {
-	"knight1": {
+	"Random knight": {
 		"intro_dialogue": [
-			{"Name": "knight1", "Emotion": "Neutral", "Text": "I am a very sick man :("},
+			{"Name": "Random knight", "Emotion": "Neutral", "Text": "Help! Help! I ran into this tree and now my head hurts :(."},
 			{"Name": "Eisai", "Emotion": "Neutral", "Text": "I am Eisai. I bring thea."},
-			{"Name": "knight1", "Emotion": "Neutral", "Text": "Lets goooooo!"}, 
+			{"Name": "Random knight", "Emotion": "Neutral", "Text": "Arrgggh my head, I'll just wait here."}, 
 			"second_dialogue"
 		],
 		"second_dialogue": [
-			{"Name": "knight1", "Emotion": "Neutral", "Text": "Have you returned to heal me, Eisai?"},
+			{"Name": "Random knight", "Emotion": "Neutral", "Text": "Have you returned with my tea, Eisai?"},
 			{"Name": "Eisai", "Emotion": "Neutral", "Text": "I am Eisai. I bring thea."},
-			{"Name": "knight1", "Emotion": "Neutral", "Text": "Epic."},
+			{"Name": "Random knight", "Emotion": "Neutral", "Text": "Is that a yes?"},
 			null
 		]
 	},

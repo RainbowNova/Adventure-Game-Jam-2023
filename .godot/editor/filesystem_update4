@@ -4,7 +4,11 @@ res://Entities/Player/Player.tscn
 res://Assets/DialogueComponent/DialogueComponent.tscn
 res://TestingArea.tscn
 res://Main Menu.tscn
-res://Main Menu.gd
+res://Scene Transition.tscn
+res://Chapter_scene_test.tscn
 res://World.tscn
 res://World.gd
-res://Scene Transition.tscn
+res://Main Menu.gd
+res://MainMenu.tscn
+res://TestingArea.gd
+res://Chapter_scene_test.gd

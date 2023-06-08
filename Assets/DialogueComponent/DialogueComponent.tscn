@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpv21ui8y1ehe"]
+[gd_scene load_steps=5 format=3 uid="uid://c3wdmq52okl6b"]
 
 [ext_resource type="Script" path="res://Assets/DialogueComponent/DialogueManager.gd" id="1_4il5g"]
 [ext_resource type="Texture2D" uid="uid://lga2ir2hllkg" path="res://Assets/Textures/dialogue_border_threeparts.png" id="2_5v3yo"]
-[ext_resource type="Texture2D" uid="uid://c228pbbireeqx" path="res://Assets/Textures/eisai_neutral.png" id="3_5dqnp"]
 [ext_resource type="FontVariation" uid="uid://brwhk11sav51b" path="res://Assets/Fonts/base_font.tres" id="3_wpuli"]
+[ext_resource type="Texture2D" uid="uid://c228pbbireeqx" path="res://Assets/Textures/Eisai_neutral.png" id="4_uha3n"]
 
 [node name="MarginContainer" type="MarginContainer"]
 offset_top = -8.5
@@ -55,7 +55,7 @@ theme_override_constants/margin_bottom = 0
 
 [node name="Portrait" type="TextureRect" parent="VBoxContainer/HBoxContainer/MarginContainer"]
 layout_mode = 2
-texture = ExtResource("3_5dqnp")
+texture = ExtResource("4_uha3n")
 expand_mode = 2
 
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
