@@ -1,27 +1,30 @@
 2a60927148abd1d33b818b535e306557
-::res://::1686235895
-Chapter_scene_test.tscn::PackedScene::8231800395579851741::1686235895::0::1::::<><>::uid://brwhk11sav51b
-DialogueManager.gd::GDScript::-1::1686233114::0::1::::<>Control<>::
+::res://::1686332294
+Chapter1_scene.gd::GDScript::-1::1686237312::0::1::::<>CanvasLayer<>::
+Chapter1_scene.tscn::PackedScene::2273710353727692230::1686332275::0::1::::<><>::res://Chapter1_scene.gd<>uid://brwhk11sav51b
+Chapter2_scene.tscn::PackedScene::3428569027128277022::1686332287::0::1::::<><>::res://Chapter1_scene.gd<>uid://brwhk11sav51b
+Chapter3_scene.tscn::PackedScene::7815997657598727946::1686332294::0::1::::<><>::res://Chapter1_scene.gd<>uid://brwhk11sav51b
+DialogueManager.gd::GDScript::-1::1686331560::0::1::::<>Control<>::
 export_presets.cfg::TextFile::-1::1685296345::0::1::::<><>::
 icon.svg::CompressedTexture2D::4535915949084907462::1685182174::1685182185::1::::<><>::
-Main Menu.gd::GDScript::-1::1686235724::0::1::::<>MarginContainer<>::
-Main Menu.tscn::PackedScene::2041976805463991359::1686235895::0::1::::<><>::res://Main Menu.gd<>uid://brwhk11sav51b<>uid://bq8cvkahqusxf
-Scene Transition.tscn::PackedScene::7572469339609009311::1686235895::0::1::::<><>::
-TestingArea.gd::GDScript::-1::1686234599::0::1::::<>Node2D<>::
-TestingArea.tscn::PackedScene::992998392257756082::1686235895::0::1::::<><>::res://TestingArea.gd<>uid://1ya2asdxxw7h<>uid://d0mtuqspcac6a<>uid://i46nu43rcghh<>res://DialogueManager.gd<>uid://coib1tvpnv4fh<>uid://df5qcspavxhic<>uid://c3wdmq52okl6b
-World.gd::GDScript::-1::1686235894::0::1::::<>Node<>::
-World.tscn::PackedScene::6181282003926873488::1686235907::0::1::::<><>::uid://ofasko55ulyw<>res://World.gd<>uid://4dfca7px6dop
+Main Menu.gd::GDScript::-1::1686235955::0::1::::<>MarginContainer<>::
+MainMenu.tscn::PackedScene::2041976805463991359::1686332109::0::1::::<><>::res://Main Menu.gd<>uid://brwhk11sav51b<>uid://bq8cvkahqusxf
+Chapter4_scene.tscn::PackedScene::6136466827086524054::1686332298::0::1::::<><>::res://Chapter1_scene.gd<>uid://brwhk11sav51b
+Scene Transition.tscn::PackedScene::7572469339609009311::1686331204::0::1::::<><>::
+TestingArea.gd::GDScript::-1::1686331560::0::1::::<>Node2D<>::
+TestingArea.tscn::PackedScene::992998392257756082::1686332109::0::1::::<><>::res://TestingArea.gd<>uid://1ya2asdxxw7h<>uid://d0mtuqspcac6a<>uid://i46nu43rcghh<>res://DialogueManager.gd<>uid://coib1tvpnv4fh<>uid://df5qcspavxhic<>uid://c3wdmq52okl6b
+World.gd::GDScript::-1::1686332262::0::1::::<>Node<>::
+World.tscn::PackedScene::4606621149782463575::1686332109::0::1::::<><>::uid://ofasko55ulyw<>res://World.gd<>uid://4dfca7px6dop
 ::res://Assets/::1686145248
-::res://Assets/DialogueComponent/::1686235895
-DialogueComponent.tscn::PackedScene::6783749768309188827::1686235895::0::1::::<><>::res://Assets/DialogueComponent/DialogueManager.gd<>uid://lga2ir2hllkg<>uid://brwhk11sav51b<>uid://c228pbbireeqx
-DialogueManager.gd::GDScript::-1::1685572844::0::1::::<>Control<>::
+::res://Assets/DialogueComponent/::1686332109
+DialogueComponent.tscn::PackedScene::6783749768309188827::1686332109::0::1::::<><>::uid://lga2ir2hllkg<>uid://brwhk11sav51b<>uid://c228pbbireeqx
 ::res://Assets/Fonts/::1685571735
 alagard.ttf::FontFile::8963617120848568202::1685571163::1685571168::1::::<><>::
 Alkhemikal.ttf::FontFile::5893441913344680744::1685571163::1685571168::1::::<><>::
 base_font.tres::FontVariation::3625491619608098005::1685571735::0::1::::<><>::uid://cp73elehxdy0o
-::res://Assets/InteractableComponent/::1686235895
+::res://Assets/InteractableComponent/::1686331203
 InteractableComponent.gd::GDScript::-1::1685386214::0::1::::<>Area2D<>::
-InteractableComponent.tscn::PackedScene::6077304922186570967::1686235895::0::1::::<><>::res://Assets/InteractableComponent/InteractableComponent.gd
+InteractableComponent.tscn::PackedScene::6077304922186570967::1686331203::0::1::::<><>::res://Assets/InteractableComponent/InteractableComponent.gd
 ::res://Assets/Sounds/::1686145104
 Flowing-Waters.mp3::AudioStreamMP3::5772108379069735741::1686145083::1686145104::1::::<><>::
 Way-of-Tea.mp3::AudioStreamMP3::3577726109016866011::1686145083::1686145101::1::::<><>::
@@ -41,15 +44,15 @@ Object_Tileset.png::CompressedTexture2D::1760804411737829906::1685604715::168614
 ::res://Dialogue/::1686233047
 DialogueFile.json::JSON::-1::1686233047::0::1::::<><>::
 DialogueManager.json::JSON::-1::1686232972::0::1::::<><>::
-::res://docs/::1686232719
+::res://docs/::1686330068
 ::res://Entities/::1685482698
-::res://Entities/NPC/::1686235895
+::res://Entities/NPC/::1686331203
 NPC.gd::GDScript::-1::1685604534::0::1::::<>CharacterBody2D<>::
-NPC.tscn::PackedScene::7573113613984675830::1686235895::0::1::::<><>::res://Entities/NPC/NPC.gd<>uid://raa4k56c22rt<>uid://cst5lay50xspj
+NPC.tscn::PackedScene::7573113613984675830::1686331203::0::1::::<><>::res://Entities/NPC/NPC.gd<>uid://raa4k56c22rt<>uid://cst5lay50xspj
 portrait.png::CompressedTexture2D::6498976534648422129::1685476510::1685482699::1::::<><>::
 temp_npc.png::CompressedTexture2D::1193262702859690265::1685296525::1685296525::1::::<><>::
-::res://Entities/Player/::1686235895
+::res://Entities/Player/::1686331203
 Eisai_Sheet.png::CompressedTexture2D::4610988905817124342::1685575823::1685575823::1::::<><>::
 Player.gd::GDScript::-1::1685577916::0::1::::<>CharacterBody2D<>::
-Player.tscn::PackedScene::1874503245096160807::1686235895::0::1::::<><>::res://Entities/Player/Player.gd<>uid://b6xukwr6rrdqs
+Player.tscn::PackedScene::1874503245096160807::1686331203::0::1::::<><>::res://Entities/Player/Player.gd<>uid://b6xukwr6rrdqs
 temp_player.png::CompressedTexture2D::2224185203187482953::1685182353::1685183487::1::::<><>::

@@ -1,5 +1,9 @@
 extends Control
 
+signal conversation_key
+
+var current_conversation_key
+
 var dialogue_manager_json_path
 var dialogue_file_json_path
 
@@ -9,7 +13,6 @@ var current_conversation_json # Feel like this isn't best OOP practice, but work
 
 var next_conversation_key
 var current_line
-
 
 @onready var dialogue_label = $VBoxContainer/HBoxContainer/MarginContainer2/DialogueLabel
 @onready var name_label = $VBoxContainer/MarginContainer/NameLabel
@@ -52,7 +55,7 @@ func start_dialogue(given_npc_name):
 		return
 
 	# Otherwise, start dialogue process: Use NPC name to get NPC conversation key
-	var current_conversation_key = get_conversation_key(given_npc_name)
+	current_conversation_key = get_conversation_key(given_npc_name)
 	
 	# If the current_conversation_key is null, dialogue can end here.
 	if current_conversation_key == null:
@@ -99,6 +102,7 @@ func scan_dialogue_data(conversation_object):
 	# Check if there are any lines of dialogue left.	
 	if phrase_num >= len(conversation_object) - 1 and may_proceed_to_next_dialogue():
 		next_conversation_key = conversation_object[phrase_num]
+		emit_signal("conversation_key", current_conversation_key)
 		set_conversation_key(Name, next_conversation_key)
 		hide()
 		return
