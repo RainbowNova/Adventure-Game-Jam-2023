@@ -1,23 +1,23 @@
 2a60927148abd1d33b818b535e306557
-::res://::1686332294
+::res://::1686334609
 Chapter1_scene.gd::GDScript::-1::1686237312::0::1::::<>CanvasLayer<>::
-Chapter1_scene.tscn::PackedScene::2273710353727692230::1686332275::0::1::::<><>::res://Chapter1_scene.gd<>uid://brwhk11sav51b
-Chapter2_scene.tscn::PackedScene::3428569027128277022::1686332287::0::1::::<><>::res://Chapter1_scene.gd<>uid://brwhk11sav51b
-Chapter3_scene.tscn::PackedScene::7815997657598727946::1686332294::0::1::::<><>::res://Chapter1_scene.gd<>uid://brwhk11sav51b
-DialogueManager.gd::GDScript::-1::1686331560::0::1::::<>Control<>::
+Chapter1_scene.tscn::PackedScene::2273710353727692230::1686334609::0::1::::<><>::res://Chapter1_scene.gd<>uid://brwhk11sav51b
+Chapter2_scene.tscn::PackedScene::3428569027128277022::1686334609::0::1::::<><>::res://Chapter1_scene.gd<>uid://brwhk11sav51b
+Chapter3_scene.tscn::PackedScene::7815997657598727946::1686334609::0::1::::<><>::res://Chapter1_scene.gd<>uid://brwhk11sav51b
+Chapter4_scene.tscn::PackedScene::6136466827086524054::1686334609::0::1::::<><>::res://Chapter1_scene.gd<>uid://brwhk11sav51b
+DialogueManager.gd::GDScript::-1::1686332500::0::1::::<>Control<>::
 export_presets.cfg::TextFile::-1::1685296345::0::1::::<><>::
 icon.svg::CompressedTexture2D::4535915949084907462::1685182174::1685182185::1::::<><>::
 Main Menu.gd::GDScript::-1::1686235955::0::1::::<>MarginContainer<>::
-MainMenu.tscn::PackedScene::2041976805463991359::1686332109::0::1::::<><>::res://Main Menu.gd<>uid://brwhk11sav51b<>uid://bq8cvkahqusxf
-Chapter4_scene.tscn::PackedScene::6136466827086524054::1686332298::0::1::::<><>::res://Chapter1_scene.gd<>uid://brwhk11sav51b
+MainMenu.tscn::PackedScene::2041976805463991359::1686334609::0::1::::<><>::res://Main Menu.gd<>uid://brwhk11sav51b<>uid://bq8cvkahqusxf
 Scene Transition.tscn::PackedScene::7572469339609009311::1686331204::0::1::::<><>::
 TestingArea.gd::GDScript::-1::1686331560::0::1::::<>Node2D<>::
-TestingArea.tscn::PackedScene::992998392257756082::1686332109::0::1::::<><>::res://TestingArea.gd<>uid://1ya2asdxxw7h<>uid://d0mtuqspcac6a<>uid://i46nu43rcghh<>res://DialogueManager.gd<>uid://coib1tvpnv4fh<>uid://df5qcspavxhic<>uid://c3wdmq52okl6b
-World.gd::GDScript::-1::1686332262::0::1::::<>Node<>::
-World.tscn::PackedScene::4606621149782463575::1686332109::0::1::::<><>::uid://ofasko55ulyw<>res://World.gd<>uid://4dfca7px6dop
+TestingArea.tscn::PackedScene::992998392257756082::1686334609::0::1::::<><>::res://TestingArea.gd<>uid://1ya2asdxxw7h<>uid://d0mtuqspcac6a<>uid://i46nu43rcghh<>res://DialogueManager.gd<>uid://coib1tvpnv4fh<>uid://df5qcspavxhic<>uid://c3wdmq52okl6b
+World.gd::GDScript::-1::1686332427::0::1::::<>Node<>::
+World.tscn::PackedScene::4606621149782463575::1686334609::0::1::::<><>::uid://ofasko55ulyw<>res://World.gd<>uid://4dfca7px6dop
 ::res://Assets/::1686145248
-::res://Assets/DialogueComponent/::1686332109
-DialogueComponent.tscn::PackedScene::6783749768309188827::1686332109::0::1::::<><>::uid://lga2ir2hllkg<>uid://brwhk11sav51b<>uid://c228pbbireeqx
+::res://Assets/DialogueComponent/::1686334609
+DialogueComponent.tscn::PackedScene::6783749768309188827::1686334609::0::1::::<><>::uid://lga2ir2hllkg<>uid://brwhk11sav51b<>uid://c228pbbireeqx
 ::res://Assets/Fonts/::1685571735
 alagard.ttf::FontFile::8963617120848568202::1685571163::1685571168::1::::<><>::
 Alkhemikal.ttf::FontFile::5893441913344680744::1685571163::1685571168::1::::<><>::
@@ -28,13 +28,14 @@ InteractableComponent.tscn::PackedScene::6077304922186570967::1686331203::0::1::
 ::res://Assets/Sounds/::1686145104
 Flowing-Waters.mp3::AudioStreamMP3::5772108379069735741::1686145083::1686145104::1::::<><>::
 Way-of-Tea.mp3::AudioStreamMP3::3577726109016866011::1686145083::1686145101::1::::<><>::
-::res://Assets/Textures/::1686232902
+::res://Assets/Textures/::1686334659
 basic_tileset.png::CompressedTexture2D::8939945882683780006::1686141953::1686141936::1::::<><>::
 bucket_knight_neutral.png::CompressedTexture2D::5320788387967820449::1685567303::1685567305::1::::<><>::
 dialogue_border.png::CompressedTexture2D::5870183040163910420::1685567303::1685567306::1::::<><>::
 dialogue_bordernew.png::CompressedTexture2D::5157854320721226420::1685567892::1685567892::1::::<><>::
 dialogue_border_threeparts.png::CompressedTexture2D::784512210663179502::1685568934::1685568937::1::::<><>::
 Eisai_neutral.png::CompressedTexture2D::6725708847097075255::1685567303::1686232902::1::::<><>::
+knight_sheet.png::CompressedTexture2D::8135053937113410459::1686334659::1686334659::1::::<><>::
 Object_Tileset.png::CompressedTexture2D::623284242629842925::1686142143::1686142143::1::::<><>::
 Random knight_neutral.png::CompressedTexture2D::7943050609311462633::1685567303::1686232896::1::::<><>::
 random_spooper_neutral.png::CompressedTexture2D::4143441484761813674::1685567303::1685567309::1::::<><>::

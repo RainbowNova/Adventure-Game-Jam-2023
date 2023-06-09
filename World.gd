@@ -1,5 +1,10 @@
 extends Node
 
+var ch1_done
+var ch2_done
+var ch3_done
+var ch4_done
+
 @onready var main_menu = $"Main Menu"
 @onready var main_game = $TestingArea
 @onready var camera = main_game.get_node("Camera2D")
@@ -9,6 +14,11 @@ var _temp_game_bus
 
 
 func _ready():
+	ch1_done = false
+	ch2_done = false
+	ch3_done = false
+	ch4_done = false
+	
 	remove_child(main_game)
 	main_menu.connect("start_game", swap_to_game)
 	main_game.connect("conversation_key", show_chapter)
@@ -23,27 +33,27 @@ func swap_to_game():
 	
 	
 func show_chapter(conversation_key):
+	var scene
 	# Way of Flow
-	if conversation_key == "intro_dialogue":
-		var scene = load("res://Chapter1_scene.tscn")
-		var test = scene.instantiate()
-		add_child(test)
+	if conversation_key == "intro_dialogue" and not ch1_done:
+		ch1_done = true
+		scene = load("res://Chapter1_scene.tscn")
 	# Way of Feedback
-	elif conversation_key == "":
-		var scene = load("res://Chapter2_scene.tscn")
-		var test = scene.instantiate()
-		add_child(test)
+	elif conversation_key == "testttt" and not ch2_done:
+		ch2_done = true
+		scene = load("res://Chapter2_scene.tscn")
 		# Way of Continual Learning and Experimentation
-	elif conversation_key == "":
-		var scene = load("res://Chapter3_scene.tscn")
-		var test = scene.instantiate()
-		add_child(test)
+	elif conversation_key == "testttt" and not ch3_done:
+		ch3_done = true
+		scene = load("res://Chapter3_scene.tscn")
 		# Way of Tea
-	elif conversation_key == "":
-		var scene = load("res://Chapter4_scene.tscn")
-		var test = scene.instantiate()
-		add_child(test)
-	
+	elif conversation_key == "testttt" and not ch4_done:
+		ch4_done = true
+		scene = load("res://Chapter4_scene.tscn")
+	else:
+		return
+	var test = scene.instantiate()
+	add_child(test)
 	
 func volume_changed(value):
 	print("Het werkt :)")

@@ -1,16 +1,10 @@
-res://Entities/NPC/NPC.tscn
-res://Assets/InteractableComponent/InteractableComponent.tscn
-res://Entities/Player/Player.tscn
-res://Assets/DialogueComponent/DialogueComponent.tscn
 res://TestingArea.tscn
-res://MainMenu.tscn
-res://Scene Transition.tscn
-res://Chapter_scene_test.tscn
-res://World.tscn
-res://World.gd
-res://TestingArea.gd
-res://DialogueManager.gd
+res://Assets/DialogueComponent/DialogueComponent.tscn
 res://Chapter1_scene.tscn
+res://MainMenu.tscn
+res://World.tscn
 res://Chapter2_scene.tscn
 res://Chapter3_scene.tscn
 res://Chapter4_scene.tscn
+res://Entities/NPC/NPC.tscn
+res://World.gd
