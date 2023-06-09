@@ -28,6 +28,11 @@ func _physics_process(delta):
 	update_animation()
 
 
+func _input(event):
+	if event.is_action_pressed("interact"):
+		emit_signal("interacting", interaction_list[0])
+
+
 func _on_interaction_zone_area_entered(area):
 	if area not in interaction_list:
 		interaction_list.append(area)

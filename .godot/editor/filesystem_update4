@@ -1,5 +1,5 @@
-res://TestingArea.tscn
 res://Assets/DialogueComponent/DialogueComponent.tscn
+res://TestingArea.tscn
 res://Chapter1_scene.tscn
 res://MainMenu.tscn
 res://World.tscn
@@ -7,8 +7,8 @@ res://Chapter2_scene.tscn
 res://Chapter3_scene.tscn
 res://Chapter4_scene.tscn
 res://Entities/NPC/NPC.tscn
-res://World.gd
 res://Entities/Player/Player.tscn
-res://Entities/Player/Player.gd
 res://Assets/InteractableComponent/InteractableComponent.tscn
+res://Entities/Player/Player.gd
+res://TestingArea.gd
 res://InteractionZone.tscn

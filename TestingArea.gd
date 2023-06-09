@@ -3,6 +3,7 @@ extends Node2D
 signal conversation_key
 @onready var dialogue_component = $GUI/DialogueComponent
 
+
 func _ready():
 	dialogue_component.hide()
 	# This is fine for this game's small scale.
