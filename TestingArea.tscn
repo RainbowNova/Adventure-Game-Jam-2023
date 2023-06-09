@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ofasko55ulyw"]
+[gd_scene load_steps=15 format=3 uid="uid://ofasko55ulyw"]
 
 [ext_resource type="Script" path="res://TestingArea.gd" id="1_qt0qh"]
 [ext_resource type="PackedScene" uid="uid://1ya2asdxxw7h" path="res://Entities/Player/Player.tscn" id="2_g7cx2"]
@@ -223,11 +223,19 @@ texture = ExtResource("3_ch7ix")
 
 [sub_resource type="TileSet" id="TileSet_qrtk2"]
 physics_layer_0/collision_layer = 1
+custom_data_layer_0/name = ""
+custom_data_layer_0/type = 0
 sources/3 = SubResource("TileSetAtlasSource_2mas4")
 sources/4 = SubResource("TileSetAtlasSource_8ll16")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kl556"]
 size = Vector2(1358, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vot4"]
+size = Vector2(64, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1qs0"]
+size = Vector2(69, 56)
 
 [node name="TestingArea" type="Node2D"]
 y_sort_enabled = true
@@ -330,3 +338,17 @@ script = ExtResource("7_jydv5")
 [node name="Background music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_66uyh")
 autoplay = true
+
+[node name="InteractionZoneWater" type="Area2D" parent="."]
+position = Vector2(48, 680)
+
+[node name="InteractionZoneWater" type="CollisionShape2D" parent="InteractionZoneWater"]
+position = Vector2(0, -341)
+shape = SubResource("RectangleShape2D_5vot4")
+
+[node name="InteractionZoneNPC" type="Area2D" parent="."]
+position = Vector2(48, 339)
+
+[node name="InteractionZoneNPC" type="CollisionShape2D" parent="InteractionZoneNPC"]
+position = Vector2(16, 69)
+shape = SubResource("RectangleShape2D_u1qs0")

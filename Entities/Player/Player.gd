@@ -25,3 +25,11 @@ func _physics_process(delta):
 	player_movement(delta)
 	move_and_slide()
 	update_animation()
+
+
+func _on_interaction_zone_area_entered(area):
+	$Label.visible = true
+
+
+func _on_interaction_zone_area_exited(area):
+	$Label.visible = false

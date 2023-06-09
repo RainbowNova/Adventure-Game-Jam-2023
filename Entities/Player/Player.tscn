@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://1ya2asdxxw7h"]
+[gd_scene load_steps=14 format=3 uid="uid://1ya2asdxxw7h"]
 
 [ext_resource type="Script" path="res://Entities/Player/Player.gd" id="1_0oxqi"]
 [ext_resource type="Texture2D" uid="uid://b6xukwr6rrdqs" path="res://Entities/Player/Eisai_Sheet.png" id="2_6q1cu"]
@@ -158,6 +158,9 @@ _data = {
 "walk_up": SubResource("Animation_kbvo8")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_e5h1k"]
+radius = 18.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_0oxqi")
 
@@ -175,3 +178,24 @@ shape = SubResource("RectangleShape2D_hfv7n")
 libraries = {
 "": SubResource("AnimationLibrary_7wqi4")
 }
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 10
+z_as_relative = false
+offset_left = -43.0
+offset_top = -28.0
+offset_right = 42.0
+offset_bottom = -2.0
+text = "Interact (E)"
+
+[node name="InteractionZone" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionZone"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_e5h1k")
+
+[connection signal="area_entered" from="InteractionZone" to="." method="_on_interaction_zone_area_entered"]
+[connection signal="area_exited" from="InteractionZone" to="." method="_on_interaction_zone_area_exited"]

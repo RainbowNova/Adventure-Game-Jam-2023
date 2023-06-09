@@ -1,3 +1,7 @@
+Marker2D
+CollisionShape2D
+Area2D
+Label
 Timer
 Button
 AnimationPlayer
@@ -5,7 +9,6 @@ MarginContainer
 CenterContainer
 VBoxContainer
 ColorRect
-Label
 CanvasLayer
 HBoxContainer
 HSlider
@@ -21,9 +24,6 @@ Node
 GridContainer
 Control
 Sprite2D
-CollisionShape2D
-Area2D
-Marker2D
 CharacterBody2D
 StaticBody2D
 RemoteTransform2D
