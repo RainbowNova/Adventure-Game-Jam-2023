@@ -235,7 +235,7 @@ size = Vector2(1358, 22)
 size = Vector2(64, 58)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u1qs0"]
-size = Vector2(69, 56)
+size = Vector2(50.5, 44)
 
 [node name="TestingArea" type="Node2D"]
 y_sort_enabled = true
@@ -340,15 +340,19 @@ stream = ExtResource("8_66uyh")
 autoplay = true
 
 [node name="InteractionZoneWater" type="Area2D" parent="."]
-position = Vector2(48, 680)
+position = Vector2(48, 656)
+collision_layer = 128
+collision_mask = 0
 
 [node name="InteractionZoneWater" type="CollisionShape2D" parent="InteractionZoneWater"]
-position = Vector2(0, -341)
+position = Vector2(0, -336)
 shape = SubResource("RectangleShape2D_5vot4")
 
 [node name="InteractionZoneNPC" type="Area2D" parent="."]
-position = Vector2(48, 339)
+position = Vector2(48, 336)
+collision_layer = 128
+collision_mask = 129
 
 [node name="InteractionZoneNPC" type="CollisionShape2D" parent="InteractionZoneNPC"]
-position = Vector2(16, 69)
+position = Vector2(16, 72)
 shape = SubResource("RectangleShape2D_u1qs0")

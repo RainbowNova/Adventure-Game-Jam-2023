@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var movement_speed: int
 @onready var animations = $AnimationPlayer
 
+var interaction_list = []
 	
 func player_movement(delta):
 	var move_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -28,8 +29,13 @@ func _physics_process(delta):
 
 
 func _on_interaction_zone_area_entered(area):
-	$Label.visible = true
+	if area not in interaction_list:
+		interaction_list.append(area)
+		$Label.visible = true
 
 
 func _on_interaction_zone_area_exited(area):
-	$Label.visible = false
+	if area in interaction_list:
+		interaction_list.erase(area)
+		if interaction_list.is_empty():
+			$Label.visible = false
